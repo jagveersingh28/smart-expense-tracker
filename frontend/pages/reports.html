@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reports – ExpenseIQ</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+  <!-- jsPDF for PDF export feature -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="sidebar-brand"><span>💸</span> ExpenseIQ</div>
+    <nav>
+      <a href="dashboard.html" class="nav-link">📊 Dashboard</a>
+      <a href="transactions.html" class="nav-link">💳 Transactions</a>
+      <a href="budgets.html" class="nav-link">🎯 Budgets</a>
+      <a href="reports.html" class="nav-link active">📈 Reports</a>
+    </nav>
+    <div class="sidebar-footer">
+      <span id="user-name-display"></span>
+      <button onclick="logout()" class="btn-logout">Logout</button>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="page-header">
+      <h2>Monthly Report</h2>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <input type="month" id="report-month" onchange="loadReport()" />
+        <button onclick="exportPDF()" class="btn-secondary">⬇️ Export PDF</button>
+      </div>
+    </div>
+
+    <!-- Report Summary (used for PDF export too) -->
+    <div id="report-content">
+      <div class="cards-grid">
+        <div class="card income-card">
+          <p class="card-label">Total Income</p>
+          <h3 class="card-value" id="r-income">₹0</h3>
+        </div>
+        <div class="card expense-card">
+          <p class="card-label">Total Expenses</p>
+          <h3 class="card-value" id="r-expense">₹0</h3>
+        </div>
+        <div class="card balance-card">
+          <p class="card-label">Savings</p>
+          <h3 class="card-value" id="r-balance">₹0</h3>
+        </div>
+      </div>
+
+      <!-- Category Breakdown Table -->
+      <div class="form-card">
+        <h3>Category Breakdown</h3>
+        <table class="report-table" id="category-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Amount Spent</th>
+            </tr>
+          </thead>
+          <tbody id="category-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/reports.js"></script>
+</body>
+</html>

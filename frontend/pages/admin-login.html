@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Login – ExpenseIQ</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="../css/admin.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+</head>
+<body class="auth-page admin-auth-page">
+
+  <div class="auth-container admin-login-box">
+    <div class="auth-brand">
+      <span class="brand-icon">🛡️</span>
+      <h1>Admin Panel</h1>
+      <p>ExpenseIQ — Administrator Access</p>
+    </div>
+
+    <form id="admin-login-form" class="auth-form" onsubmit="handleAdminLogin(event)">
+      <div class="form-group">
+        <label>Admin Email</label>
+        <input type="email" id="admin-email" placeholder="admin@expenseiq.com" required/>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="admin-password" placeholder="••••••••" required/>
+      </div>
+      <button type="submit" class="btn-primary" id="admin-login-btn">Login as Admin</button>
+      <p id="admin-login-msg" class="form-msg"></p>
+    </form>
+
+    <p style="text-align:center; margin-top:16px; font-size:0.85rem;">
+      <a href="index.html" style="color:var(--text-muted)">← Back to User Login</a>
+    </p>
+  </div>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/admin-auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+/* ─── Admin Specific Styles ─────────────────────────────────────── */
+
+.admin-auth-page {
+  background: radial-gradient(ellipse at 40% 60%, #1a1040 0%, #0f1117 70%);
+}
+
+.admin-login-box {
+  border-color: rgba(255, 101, 132, 0.3);
+  box-shadow: 0 20px 60px rgba(255, 101, 132, 0.1);
+}
+
+.admin-login-box .auth-brand h1 {
+  color: #ff6584;
+}
+
+.admin-sidebar {
+  background: #120f1a;
+  border-right-color: #2a1a35;
+}
+
+.admin-sidebar .sidebar-brand {
+  color: #ff6584;
+}
+
+.admin-sidebar .nav-link.active {
+  background: rgba(255, 101, 132, 0.15);
+  color: #ff6584;
+}
+
+.admin-sidebar .nav-link:hover {
+  background: rgba(255, 101, 132, 0.08);
+}
+
+/* ─── Admin Badge ───────────────────────────────────────────────── */
+.admin-badge {
+  background: rgba(255, 101, 132, 0.15);
+  color: #ff6584;
+  border: 1px solid rgba(255, 101, 132, 0.3);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+/* ─── Role Badge ────────────────────────────────────────────────── */
+.role-badge {
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.role-badge.admin {
+  background: rgba(255, 101, 132, 0.15);
+  color: #ff6584;
+}
+.role-badge.user {
+  background: rgba(108, 99, 255, 0.15);
+  color: #6c63ff;
+}
+
+/* ─── Log Action Badge ──────────────────────────────────────────── */
+.log-action {
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+.log-action.login        { background: rgba(46,204,113,0.15);  color: #2ecc71; }
+.log-action.signup       { background: rgba(108,99,255,0.15);  color: #6c63ff; }
+.log-action.failed_login { background: rgba(231,76,60,0.15);   color: #e74c3c; }
+.log-action.admin_login  { background: rgba(255,101,132,0.15); color: #ff6584; }
+
+/* ─── Table improvements ────────────────────────────────────────── */
+.report-table tbody tr:hover {
+  background: rgba(255,255,255,0.03);
+}
