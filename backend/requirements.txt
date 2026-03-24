@@ -16,3 +16,4 @@ python-docx==1.2.0
 python-dotenv==1.2.2
 typing_extensions==4.15.0
 Werkzeug==3.1.6
+gunicorn
