@@ -13,7 +13,7 @@ from routes.report_routes import report_bp
 from routes.admin_routes import admin_bp          # NEW: admin routes
 
 app = Flask(__name__)
-CORS(app, origins=["http://127.0.0.1:5500", "http://localhost:5500"])
+CORS(app, origins=["http://127.0.0.1:5500", "http://localhost:5500", "https://smart-expense-tracker-gray.vercel.app"])
 
 app.config["JWT_SECRET_KEY"] = os.getenv("JWT_SECRET_KEY", "super-secret-key")
 jwt = JWTManager(app)
