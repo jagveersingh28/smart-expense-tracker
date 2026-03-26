@@ -2,7 +2,7 @@
 // Bridge between frontend and backend — all fetch() calls live here
 // ─────────────────────────────────────────────────────────────────
 
-const BASE_URL = "http://127.0.0.1:5000/api";
+const BASE_URL = "https://smart-expense-tracker-83jk.onrender.com/api";
 
 function getToken() {
   return localStorage.getItem("token") || localStorage.getItem("admin_token");
